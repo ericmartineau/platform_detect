@@ -10,7 +10,7 @@ A library for detecting browser and platform type and version.
 A simple usage example:
 
 ```dart
-import 'package:platform_detect/platform_detect.dart';
+import 'package:platform_detect2/platform_detect.dart';
 
 main() {
   if (browser.isChrome) {
@@ -32,8 +32,8 @@ Add the `decorator.dart` import as shown in the example below, and call `decorat
 within `main` in your application.
 
 ```dart
-import 'package:platform_detect/platform_detect.dart';
-import 'package:platform_detect/decorator.dart';
+import 'package:platform_detect2/platform_detect.dart';
+import 'package:platform_detect2/decorator.dart';
 
 main() {
   decorateRootNodeWithPlatformClasses();
@@ -57,8 +57,8 @@ own `Feature` instances, and passing a list of them as the `features` argument t
 `decorateRootNodeWithPlatformClasses`:
 
 ```dart
-import 'package:platform_detect/platform_detect.dart';
-import 'package:platform_detect/decorator.dart';
+import 'package:platform_detect2/platform_detect.dart';
+import 'package:platform_detect2/decorator.dart';
 
 // For instance, if you need to detect whether a browser supports H5 canvas stuff...
 var canvasFeature = new Feature('canvas', new CanvasElement().context2D != null);

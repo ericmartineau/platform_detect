@@ -1,8 +1,8 @@
 @TestOn('vm')
 import 'package:test/test.dart';
 
-import 'package:platform_detect/src/navigator.dart';
-import 'package:platform_detect/src/operating_system.dart';
+import 'package:platform_detect2/src/navigator.dart';
+import 'package:platform_detect2/src/operating_system.dart';
 
 final linux = TestNavigator()..appVersion = 'Linux';
 final mac = TestNavigator()..appVersion = 'Macintosh';
@@ -12,7 +12,7 @@ final windows = TestNavigator()..appVersion = 'Windows';
 void main() {
   group('operating system detects', () {
     tearDown(() {
-      OperatingSystem.navigator = null;
+      OperatingSystem.navigator = TestNavigator();
     });
 
     test('Unknown Operating System', () {

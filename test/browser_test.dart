@@ -2,21 +2,20 @@
 import 'package:pub_semver/pub_semver.dart';
 import 'package:test/test.dart';
 
-import 'package:platform_detect/src/browser.dart';
-import 'package:platform_detect/src/navigator.dart';
+import 'package:platform_detect2/src/browser.dart';
+import 'package:platform_detect2/src/navigator.dart';
 import './constants.dart';
 
 void main() {
-  Browser browser;
+  late Browser browser;
 
   group('browser detects', () {
     tearDown(() {
-      browser?.clearVersion();
-      Browser.navigator = null;
+      browser.clearVersion();
+      Browser.navigator = TestNavigator();
     });
 
     test('Unknown Browser', () {
-      Browser.navigator = TestNavigator();
       browser = Browser.getCurrentBrowser();
       expect(browser.name, Browser.UnknownBrowser.name);
       expect(browser.version, Browser.UnknownBrowser.version);
@@ -85,7 +84,7 @@ void main() {
 
     group('Safari', () {
       tearDown(() {
-        Browser.navigator = null;
+        Browser.navigator = TestNavigator();
       });
 
       test('major, minor and patch version', () {

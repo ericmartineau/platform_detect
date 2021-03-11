@@ -13,7 +13,7 @@
 // limitations under the License.
 import 'dart:html';
 
-import 'package:platform_detect/platform_detect.dart' show browser;
+import 'package:platform_detect2/platform_detect2.dart' show browser;
 
 /// The [Feature]s that `decorateRootNodeWithPlatformClasses` will produce CSS classes for no matter what.
 final List<Feature> defaultFeatureCssClassDecorators = [
@@ -55,12 +55,12 @@ class Feature {
   static final Feature touchEvents = Feature(
       'touch',
       window.navigator.maxTouchPoints != null
-          ? window.navigator.maxTouchPoints > 0
+          ? (window.navigator.maxTouchPoints ?? 0) > 0
           : TouchEvent.supported);
 
   /// Whether the internet explorer browser supports touch events.
   ///
   /// Related: [touchEvents]
   static final Feature msTouchEvents = Feature('mstouch',
-      browser.isInternetExplorer && window.navigator.maxTouchPoints > 1);
+      browser.isInternetExplorer && (window.navigator.maxTouchPoints ?? 0) > 1);
 }

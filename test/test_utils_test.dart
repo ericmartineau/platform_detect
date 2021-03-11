@@ -1,8 +1,8 @@
 @TestOn('browser')
 import 'package:test/test.dart';
 
-import 'package:platform_detect/platform_detect.dart';
-import 'package:platform_detect/test_utils.dart';
+import 'package:platform_detect2/platform_detect2.dart';
+import 'package:platform_detect2/test_utils.dart';
 
 void main() {
   group('platform detect test utils', () {

@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-export 'package:platform_detect/platform_detect.dart'
+export 'package:platform_detect2/platform_detect2.dart'
     show defaultFeatureCssClassDecorators, Feature;
-export 'package:platform_detect/src/decorator.dart'
+export 'package:platform_detect2/src/decorator.dart'
     show getPlatformClasses, decorateRootNodeWithPlatformClasses;

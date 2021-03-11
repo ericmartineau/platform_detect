@@ -11,9 +11,9 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-export 'package:platform_detect/src/detect.dart'
+export 'package:platform_detect2/src/detect.dart'
     show configurePlatformForTesting;
-export 'package:platform_detect/src/browser.dart'
+export 'package:platform_detect2/src/browser.dart'
     show chrome, firefox, internetExplorer, safari, wkWebView;
-export 'package:platform_detect/src/operating_system.dart'
+export 'package:platform_detect2/src/operating_system.dart'
     show linux, mac, unix, windows;

@@ -14,8 +14,8 @@
 import 'dart:html';
 
 import 'package:meta/meta.dart';
-import 'package:platform_detect/platform_detect.dart';
-import 'package:platform_detect/src/support.dart';
+import 'package:platform_detect2/platform_detect2.dart';
+import 'package:platform_detect2/src/support.dart';
 
 /// The CSS class that will be used to indicate that [decorateRootNodeWithPlatformClasses]
 /// has already been invoked for a given root node.
@@ -111,7 +111,7 @@ bool nodeHasBeenDecorated(Element rootNode) =>
 /// If you do not want [defaultFeatureCssClassDecorators] to be used,
 /// set [includeDefaults] to `false`.
 String getPlatformClasses(
-    {List<Feature> features,
+    {List<Feature> features = const [],
     bool includeDefaults = true,
     List<String> existingClasses = const []}) {
   var allFeatures = Set<Feature>.from(features ?? []);
@@ -136,10 +136,10 @@ String getPlatformClasses(
 ///
 /// By default, [rootNode] is [document.documentElement].
 void decorateRootNodeWithPlatformClasses(
-    {List<Feature> features,
+    {List<Feature> features = const [],
     bool includeDefaults = true,
-    Element rootNode,
-    callback()}) {
+    Element? rootNode,
+    VoidCallback? callback}) {
   rootNode ??= document.documentElement;
 
   if (rootNode != null && !nodeHasBeenDecorated(rootNode)) {
@@ -150,6 +150,6 @@ void decorateRootNodeWithPlatformClasses(
         includeDefaults: includeDefaults,
         existingClasses: existingClasses);
 
-    if (callback != null) callback();
+    callback?.call();
   }
 }

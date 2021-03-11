@@ -1,5 +1,5 @@
 @TestOn('browser')
-import 'package:platform_detect/src/support.dart';
+import 'package:platform_detect2/src/support.dart';
 import 'package:test/test.dart';
 
 void main() {
