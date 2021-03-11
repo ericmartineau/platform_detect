@@ -1,6 +1,6 @@
 name: platform_detect2
 author: Workiva Client Platform Team <team-clientplatform@workiva.com>
-version: 1.5.0+1
+version: 1.5.0+2
 homepage: https://github.com/Workiva/platform_detect
 documentation: https://www.dartdocs.org/documentation/platform_detect/latest
 description: A lightweight library for detecting the running browser and OS
