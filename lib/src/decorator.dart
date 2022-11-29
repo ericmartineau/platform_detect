@@ -15,7 +15,6 @@ import 'dart:html';
 
 import 'package:meta/meta.dart';
 import 'package:platform_detect2/platform_detect2.dart';
-import 'package:platform_detect2/src/support.dart';
 
 /// The CSS class that will be used to indicate that [decorateRootNodeWithPlatformClasses]
 /// has already been invoked for a given root node.
