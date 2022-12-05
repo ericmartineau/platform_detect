@@ -3,7 +3,6 @@ import 'dart:html';
 
 import 'package:platform_detect2/platform_detect2.dart';
 import 'package:platform_detect2/src/decorator.dart';
-import 'package:platform_detect2/src/support.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -44,7 +43,7 @@ void main() {
 
       test('should identify the operating system', () {
         expect(fakeRootNode!.classes,
-            contains('os-${nameToClassName(operatingSystem?.name ?? '')}'));
+            contains('os-${nameToClassName(operatingSystem.name ?? '')}'));
       });
 
       group('should identify the browser', () {
